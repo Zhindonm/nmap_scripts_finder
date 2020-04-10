@@ -4,10 +4,11 @@ Bash program to find NMAP scripts by categories in `/usr/share/nmap/scripts/`
 ## Usage
 
 To list available scripts' categories simply run the program without any arguments:  
-```bash
+```
 $ ./nmap_scripts_finder
 Enter a category to search for NMAP scripts
 Available categories:
+
 "auth"
 "broadcast"
 "brute"
@@ -15,10 +16,11 @@ Available categories:
 ```
 
 Find scripts of category `foo`:  
-```bash
+```
 $ ./nmap_scripts_finder foo
-Available in NMAP scripts in /usr/share/nmap/scripts/'
+Available NMAP scripts in /usr/share/nmap/scripts/'
 Category : foo
+
 ...
 ```
 

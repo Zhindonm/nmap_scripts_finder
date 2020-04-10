@@ -13,7 +13,7 @@ if [[ $# -eq 0 ]]; then
   echo ''
   grep -r categories /usr/share/nmap/scripts/*.nse | grep -oP '".*?"' | sort -u
 else
-  echo 'Available in NMAP scripts in /usr/share/nmap/scripts/'
+  echo 'Available NMAP scripts in /usr/share/nmap/scripts/'
   echo 'Category :' $1
   echo ''
   grep -r categories /usr/share/nmap/scripts/*.nse | grep $1 | awk -F: '{print $1}' | awk -F/ '{print $6}' | sort -u
