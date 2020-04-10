@@ -1,0 +1,20 @@
+###################################################
+##                                               ##
+##    author: Manuel Zhindon                     ##
+##    github: https://github.com/Zhindonm        ##
+##                                               ##
+###################################################
+
+#!/bin/bash
+
+if [[ $# -eq 0 ]]; then
+  echo 'Enter a category to search for NMAP scripts'
+  echo 'Available categories:'
+  echo ''
+  grep -r categories /usr/share/nmap/scripts/*.nse | grep -oP '".*?"' | sort -u
+else
+  echo 'Available in NMAP scripts in /usr/share/nmap/scripts/'
+  echo 'Category :' $1
+  echo ''
+  grep -r categories /usr/share/nmap/scripts/*.nse | grep $1 | awk -F: '{print $1}' | awk -F/ '{print $6}' | sort -u
+fi
